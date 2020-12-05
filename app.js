@@ -19,17 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
-//RESTFUL API
-//Users API
-
-//CRUD
-//CREATE
-//READ
-//UPDATE
-//DELETE
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
