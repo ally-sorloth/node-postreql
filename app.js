@@ -12,6 +12,9 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//TODO:// to be removed
+require("./models/User")
+
 //connect to db
 
 /* DB_USERNAME
@@ -21,14 +24,7 @@ DB_PORT
 DB_NAME
 */
 
-const {DB_USERNAME, DB_PASSWORD, DB_HOSTNAME, DB_PORT, DB_NAME} = process.env;
-const sequelize = new Sequelize(`postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}`);
 
-sequelize
-  .authenticate()
-  .then(() => console.log("Succesfully connected to database"))
-  .catch((err) => console.log("Unable to connect to database", err))
-  .finally();
 
 
 // view engine setup
