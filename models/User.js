@@ -29,6 +29,7 @@ const UserModel = sequelize.define(
   },
   {
     //options
+    // freezeTableName: true,
   }
 );
 
