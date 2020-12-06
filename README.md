@@ -1,2 +1,9 @@
 CLARUSWAY
 nodejs postreql create
+
+
+DB_USERNAME=
+DB_PASSWORD=
+DB_HOSTNAME=
+DB_PORT=
+DB_NAME=
