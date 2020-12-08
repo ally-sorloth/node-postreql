@@ -47,17 +47,26 @@ exports.delete_user = async (req, res) => {
   }
 };
 
-exports.edit_user = async (req, res) => {
-  console.log(req);
+exports.show_update_user_form = (req, res) => {
+  id = req.params.id,
+  firstName= req.params.firstName,
+  lastName= req.params.lastName,
+  res.render("updateUser")
+};
+
+
+exports.update_user = async (req, res) => {
+  console.log(req.params);
   try {
-    const editUser = await UserModel.update({
-      firstName: req.body.first_name
+    const update_user = await UserModel.update({
+      firstName: req.body.first_name,
+      lastName: req.body.lastName
     }, 
       {where: { id: req.params.id}
 
     });
-    
+  
   } catch (error) {
     
   }
-}
+};
